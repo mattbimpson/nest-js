@@ -1,7 +1,6 @@
 import { ConnectionOptions } from 'typeorm';
 import { join } from 'path';
 
-// todo - these should be using process.env values 
 const config: ConnectionOptions = {
   type: 'postgres',
   host: 'localhost',
