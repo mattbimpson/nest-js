@@ -6,7 +6,5 @@ import { Logger } from "@nestjs/common";
 export class ItemRepository extends Repository<Item> {
   private logger = new Logger('ItemRepository');
 
-  getBaseQuery() {
-    return this.createQueryBuilder('item').select(['item']);
-  }
+  
 }
