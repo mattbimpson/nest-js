@@ -1,5 +1,6 @@
-import { BaseEntity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, PrimaryGeneratedColumn, Entity } from "typeorm";
 
+@Entity()
 export class Item extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
