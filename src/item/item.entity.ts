@@ -5,9 +5,9 @@ export class Item extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'string' })
+  @Column({ nullable: true })
   name: string;
 
-  @Column({ type: 'string' })
+  @Column({ nullable: true })
   description: string;
 }
