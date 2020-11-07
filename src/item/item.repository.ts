@@ -1,5 +1,5 @@
 import { Repository, EntityRepository } from "typeorm";
-import { Item } from "src/model/item.entity";
+import { Item } from "./item.entity";
 import { Logger } from "@nestjs/common";
 
 @EntityRepository(Item)

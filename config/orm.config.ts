@@ -4,7 +4,7 @@ import { join } from 'path';
 // todo - these should be using process.env values 
 const config: ConnectionOptions = {
   type: 'postgres',
-  host: '127.0.0.1',
+  host: 'localhost',
   port: 5432,
   username: 'postgres',
   password: 'mysecretpassword',
