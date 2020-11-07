@@ -1,12 +1,12 @@
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+NestJS API with Postgres database / TypeORM
 
 ## Installation
 
 - Install the nestjs cli
 - Install docker desktop
-- Grab the prebuilt PostGres docker image by running: "docker pull postgres"
+- Grab the prebuilt Postgres docker image by running: "docker pull postgres"
 - Run npm install
 - Run npm run start:dev:db (this starts the docker container with our postgres database)
 - Run npm run build
