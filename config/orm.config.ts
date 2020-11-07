@@ -1,14 +1,14 @@
 import { ConnectionOptions } from 'typeorm';
 import { join } from 'path';
 
-// Check typeORM documentation for more information.
+// todo - these should be using process.env values 
 const config: ConnectionOptions = {
   type: 'postgres',
-  host: process.env.POSTGRES_HOST,
-  port: Number(process.env.POSTGRES_PORT) || 5432,
-  username: process.env.POSTGRES_USER,
-  password: process.env.POSTGRES_PASSWORD,
-  database: process.env.POSTGRES_DB,
+  host: '127.0.0.1',
+  port: 5432,
+  username: 'postgres',
+  password: 'mysecretpassword',
+  database: 'my_database',
   entities: [join(__dirname, '..', 'src', '**', '*.entity.{ts,js}')],
   synchronize: false,
   migrationsRun: false,
