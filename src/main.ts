@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -14,6 +15,16 @@ async function bootstrap() {
   });
 
   app.useGlobalPipes(new ValidationPipe());
+
+  if (process.env.NODE_ENV !== 'production') {
+    const document = SwaggerModule.createDocument(app, new DocumentBuilder()
+      .setTitle('NestJS API')
+      .setDescription('My NestJS API')
+      .build());
+
+    SwaggerModule.setup('docs', app, document);
+
+  }
 
   await app.listen(port);
 }
