@@ -13,4 +13,10 @@ export class ItemService {
       .find()
       .then(items => items.map(x => ItemDto.fromEntity(x)));
   }
+
+  public async create(dto: ItemDto): Promise<ItemDto> {
+    return this.repo
+      .save(ItemDto.toEntity(dto))
+      .then(x => ItemDto.fromEntity(x));
+  }
 }

@@ -25,6 +25,15 @@ export class ItemDto implements Readonly<ItemDto> {
       name: entity.name,
       description: entity.description,
       count: entity.count
-    }
+    } as ItemDto;
+  }
+
+  public static toEntity(item: ItemDto) {
+    return {
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      count: item.count
+    } as Item;
   }
 }
